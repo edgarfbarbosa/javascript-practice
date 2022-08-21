@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicando JavaScript interno</title>
+</head>
+<body>
+    <p id="para"></p>
+    <button id="btn">Clique em mim</button>
+    <script>
+        const btn = document.getElementById('btn');
+        
+        function chamarPara() {
+            let para = document.getElementById('para');
+            
+            para.innerHTML = 'Você clicou em mim';
+        }
+        
+        btn.addEventListener('click', chamarPara);
+    </script>
+</body>
+</html>
