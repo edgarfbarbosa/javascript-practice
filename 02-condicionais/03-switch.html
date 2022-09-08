@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Declarações switch</title>
+</head>
+<body>
+    <select id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <p id="p"></p>
+    <script>
+        const select = document.getElementById('select');
+        const p = document.getElementById('p');
+        
+        function casos() {
+            let escolha = select.value;
+            
+            switch (escolha) {
+                case '1':
+                    p.textContent = 'Você escolheu o 1.';
+                    break;
+                case '2':
+                    p.textContent = 'Você escolheu o 2.';
+                    break;
+            }
+        }
+        
+        select.addEventListener('change', casos);
+    </script>
+</body>
+</html>
