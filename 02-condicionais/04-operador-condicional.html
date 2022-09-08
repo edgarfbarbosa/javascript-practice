@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Operador Condicional Ternário</title>
+</head>
+<body>
+    <h1>Você pode alterar a cor do fundo</h1>
+    <label>Selecione a cor de fundo:</label>
+    <select id="select">
+        <option value="branco">Branco</option>
+        <option value="preto">Preto</option>
+    </select>
+    <script>
+        const html = document.querySelector('html');
+        const select = document.getElementById('select');
+        
+        function alterarCor(corDeFundo, corDoTexto) {
+            html.style.backgroundColor = corDeFundo;
+            html.style.color = corDoTexto;
+        }
+        
+        select.onchange = function() {
+            (select.value === 'preto') ? alterarCor('black', 'white') : alterarCor('white', 'black');
+        }
+    </script>
+</body>
+</html>
