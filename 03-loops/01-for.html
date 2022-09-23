@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>For loop padrão</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        const p = document.getElementById('p');
+        const names = ['Edgar', 'Romeu', 'Julieta', 'Maria', 'Téo'];
+        var phrase = 'Nome das pessoas que devem estar na reunião: ';
+        
+        // for (var i = 0; i < 10; i++) {
+        //     console.log(i);
+        // }
+        
+        for (var i = 0; i < names.length; i++) {
+            phrase += names[i] + ', ';
+        }
+        
+        p.textContent = phrase;
+    </script>
+</body>
+</html>
